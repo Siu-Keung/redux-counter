@@ -11,6 +11,9 @@ export default (currentState = [0, 0], action) => {
         case 'MUL':
             newState[action.index] = newState[action.index] * action.times;
             return newState;
+        case 'DELAY_ADD':
+            newState[action.index]++;
+            return newState;
         default:
             return currentState;
     }
