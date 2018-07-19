@@ -8,6 +8,9 @@ export default (currentState = [0, 0], action) => {
         case 'SUB':
             newState[action.index]--;
             return newState;
+        case 'MUL':
+            newState[action.index] = newState[action.index] * action.times;
+            return newState;
         default:
             return currentState;
     }

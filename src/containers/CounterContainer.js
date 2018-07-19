@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownProps) =>{
 const mapDispatchToProps = (dispatch, ownProps) =>{
     return {
         onAddButtonClicked: (index) => dispatch({type: 'ADD', index: index}),
-        onSubButtonClicked: (index) => dispatch({type: 'SUB', index: index})
+        onSubButtonClicked: (index) => dispatch({type: 'SUB', index: index}),
+        onMultiButtonClicked: (index, times) => dispatch({type: 'MUL', index: index, times: times})
     }
 }
 
