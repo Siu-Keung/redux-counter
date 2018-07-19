@@ -8,12 +8,12 @@ class Counter extends Component{
 
 
     render(){
-        const {onAddButtonClicked} = this.props;
+        const {onAddButtonClicked, onSubButtonClicked} = this.props;
         return (
             <p>
                 <span>点击了：{this.props.count}次</span>
                 <button onClick={onAddButtonClicked.bind(this, this.props.index)}>+</button>
-                <button>-</button>
+                <button onClick={onSubButtonClicked.bind(this, this.props.index)}>-</button>
                 <input type='text' />
                 <button>X</button>
                 <button>延迟+</button>

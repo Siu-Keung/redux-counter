@@ -5,6 +5,9 @@ export default (currentState = [0, 0], action) => {
         case 'ADD':
             newState[action.index]++;
             return newState;
+        case 'SUB':
+            newState[action.index]--;
+            return newState;
         default:
             return currentState;
     }
